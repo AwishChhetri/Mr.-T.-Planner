@@ -22,7 +22,7 @@ async function getPrompt(prompt) {
           model: 'gpt-3.5-turbo',
           messages: prompt,
           temperature: 0.7,
-          max_tokens:200,
+          max_tokens:500,
         });
         return response.choices[0].message.content;
     } catch (error) {
@@ -37,11 +37,14 @@ app.post('/api',async(req,res)=>{
     const days=req.body.Days;
     const result=await getPrompt([ { role: 'system', content: 'You are a helpful assistant.' },
     { role: 'user', content: `${days} days trip planning to ${place}?` }]);
-    res.send(result)
+    console.log(result)
+    res.render("api",{Plan:result, placeName:req.body.Place})
 })
 
-
-
+app.get('/app',async(req,res)=>{
+   
+    res.render("api")
+})
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });

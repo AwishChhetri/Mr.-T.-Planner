@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Your Plan</title>
+</head>
+<body class="text-gray-400 bg-gray-900">
+   
+        <div class="container px-5 py-24 mx-auto" style="height: max-content;">
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+            <h2 class="text-purple font-medium title-font tracking-wider text-2xl">Lets Go!</h2>
+            <p class="text-gray-500 text-xl text-white">
+                <%- placeName%>
+            </p>
+            <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-8 mb-6"></span>
+            
+            <p class="leading-relaxed  container  mx-auto text-md">
+                <%- Plan %>
+            </p>
+           
+          </div>
+        </div>
+    
+
+      <footer class="text-gray-400 bg-gray-900 body-font ">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          
+            <span class="ml-3 text-xl">Abish Chhetri</span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 Connect—
+            <a href="https://www.linkedin.com/in/abish-chhetri-078827251" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@abi.dev</a>
+          </p>
+         
+        </div>
+      </footer>
+</body>
+</html>
