@@ -22,7 +22,11 @@ async function getPrompt(prompt) {
           model: 'gpt-3.5-turbo',
           messages: prompt,
           temperature: 0.7,
+<<<<<<< HEAD
           max_tokens:500,
+=======
+          max_tokens:400,
+>>>>>>> 21c068b89f9d2dfbdbed6f3e29703cbe385e1da0
         });
         return response.choices[0].message.content;
     } catch (error) {
